@@ -11,7 +11,7 @@ from itertools import product
 import string
 print("EL PRIMO")
 time.sleep(3)
-print("This is our own version of 'Uno'. Instead of the colours you will have letters. If you don't have a card that can be played, enter 'X'. You should enter the 'X' in the first try. Also, the special cards have been removed. The rest of the game is the same.")
+print("This is our own version of 'Uno'. Instead of the colours you will have letters. Also, the special cards have been removed. The rest of the game is the same.")
 time.sleep(2)
 letter_list1 = list(string.ascii_uppercase)
 idontneedthsi = int(input("Enter the number of suites: "))
