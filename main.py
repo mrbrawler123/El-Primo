@@ -14,9 +14,12 @@ time.sleep(3)
 print("This is our own version of 'Uno'. Instead of the colours you will have letters. Also, the special cards have been removed. The rest of the game is the same.")
 time.sleep(2)
 letter_list1 = list(string.ascii_uppercase)
-idontneedthsi = int(input("Enter the number of suites: "))
-while idontneedthsi.is_integer is False:
-	idontneedthsi = int(input("Only enter integer values: "))
+idontneedthsi = input("Enter the number of suites: ")
+try:
+	 int(idontneedthsi)
+except ValueError:
+	idontneedthsi = input("Only enter an integer value: ")
+idontneedthsi = int(idontneedthsi)
 time.sleep(1)
 if idontneedthsi > 26 or idontneedthsi < 2:
 	idontneedthsi = int(input("Enter a number less than or equal to 26 and greater than 1: "))
