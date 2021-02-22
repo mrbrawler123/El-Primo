@@ -15,6 +15,8 @@ print("This is our own version of 'Uno'. Instead of the colours you will have le
 time.sleep(2)
 letter_list1 = list(string.ascii_uppercase)
 idontneedthsi = int(input("Enter the number of suites: "))
+while idontneedthsi.is_integer is False:
+	idontneedthsi = int(input("Only enter integer values: "))
 time.sleep(1)
 if idontneedthsi > 26 or idontneedthsi < 2:
 	idontneedthsi = int(input("Enter a number less than or equal to 26 and greater than 1: "))
