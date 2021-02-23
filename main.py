@@ -115,5 +115,3 @@ if len(cablan_deck) == 0:
 	print("The Computer has won!")
 if len(player_deck) == 0:
 	print("You have won!")
-if len(player_deck) == 0 and len(cablan_deck) == 0:
-	print("It is a draw!")
