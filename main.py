@@ -10,16 +10,15 @@ import random
 from itertools import product
 import string
 print("EL PRIMO")
-time.sleep(3)
+time.sleep(2)
 print("This is our own version of 'Uno'. Instead of the colours you will have letters. Also, the special cards have been removed. The rest of the game is the same.")
 time.sleep(2)
 letter_list1 = list(string.ascii_uppercase)
 idontneedthsi = input("Enter the number of suites: ")
-while True:
-	try:
-	 int(idontneedthsi)
-	except ValueError:
-		idontneedthsi = input("Only enter an integer value: ")
+try:
+ int(idontneedthsi)
+except ValueError:
+	idontneedthsi = input("Only enter an integer value: ")
 idontneedthsi = int(idontneedthsi)
 time.sleep(1)
 if idontneedthsi > 26 or idontneedthsi < 2:
