@@ -15,10 +15,11 @@ print("This is our own version of 'Uno'. Instead of the colours you will have le
 time.sleep(2)
 letter_list1 = list(string.ascii_uppercase)
 idontneedthsi = input("Enter the number of suites: ")
-try:
+while True:
+	try:
 	 int(idontneedthsi)
-except ValueError:
-	idontneedthsi = input("Only enter an integer value: ")
+	except ValueError:
+		idontneedthsi = input("Only enter an integer value: ")
 idontneedthsi = int(idontneedthsi)
 time.sleep(1)
 if idontneedthsi > 26 or idontneedthsi < 2:
