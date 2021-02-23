@@ -1,33 +1,28 @@
-def common_data(list1, list2):
-	result = False
-	for x in list1:
-		for y in list2:
-			if x == y:
-				result = True
-				return result
-
-
+def common_data(list1, list2): 
+    result = False
+    for x in list1: 
+      for y in list2: 
+        if x == y: 
+          result = True
+          return result
 import time
 import random
 from itertools import product
 import string
 print("EL PRIMO")
 time.sleep(3)
-print(
-    "This is our own version of 'Uno'. Instead of the colours you will have letters. Also, the special cards have been removed. The rest of the game is the same."
-)
+print("This is our own version of 'Uno'. Instead of the colours you will have letters. Also, the special cards have been removed. The rest of the game is the same.")
 time.sleep(2)
 letter_list1 = list(string.ascii_uppercase)
 idontneedthsi = input("Enter the number of suites: ")
 try:
-	int(idontneedthsi)
+	 int(idontneedthsi)
 except ValueError:
 	idontneedthsi = input("Only enter an integer value: ")
 idontneedthsi = int(idontneedthsi)
 time.sleep(1)
 if idontneedthsi > 26 or idontneedthsi < 2:
-	idontneedthsi = int(
-	    input("Enter a number less than or equal to 26 and greater than 1: "))
+	idontneedthsi = int(input("Enter a number less than or equal to 26 and greater than 1: "))
 	time.sleep(1)
 letter_list = []
 time.sleep(1)
@@ -37,10 +32,7 @@ time.sleep(1)
 s = int(input("Enter the number of cards you want in your deck: "))
 time.sleep(1)
 while s > len(letter_list) * 5 - 5:
-	s = int(
-	    input(
-	        f"You can have upto {len(letter_list) * 5 - 5} cards in your deck: "
-	    ))
+	s = int(input(f"You can have upto {len(letter_list) * 5 - 5} cards in your deck: "))
 	time.sleep(1)
 num_list = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 possible_cards = list(product(num_list, letter_list))
@@ -85,11 +77,8 @@ while len(cablan_deck) != 0 and len(player_deck) != 0:
 		p = p.upper()
 		p_list = list(p)
 		previouscard_list = list(previouscard)
-		while p not in player_deck or common_data(p_list,
-		                                          previouscard_list) != True:
-			p = input(
-			    "Enter a card in your deck and with a common number or letter: "
-			)
+		while p not in player_deck or common_data(p_list, previouscard_list) != True:
+			p = input("Enter a card in your deck and with a common number or letter: ")
 			time.sleep(1)
 			p = p.upper()
 			p_list = list(p)
